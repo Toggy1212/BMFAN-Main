@@ -4,16 +4,11 @@ This repository provides the PyTorch implementation of **BMFAN** for lightweight
 
 ## Environment
 
-Please install the required packages before running the code.
+This code is implemented based on the EDSR-PyTorch framework.  
+Please refer to the official EDSR repository for environment configuration and basic usage:
 
 ```bash
-pip install torch torchvision numpy imageio scikit-image tqdm
-```
-
-If your code uses extra modules such as `einops`, `timm`, or `opencv-python`, install them as needed:
-
-```bash
-pip install einops timm opencv-python
+https://github.com/sanghyun-son/EDSR-PyTorch
 ```
 
 ## Dataset Preparation
@@ -49,14 +44,10 @@ dataset/
             └── X2/
 ```
 
-For benchmark testing, the dataset path should be:
+For benchmark testing, the datasets should be placed under:
 
 ```bash
-../dataset/benchmark/Set5
-../dataset/benchmark/Set14
-../dataset/benchmark/B100
-../dataset/benchmark/Urban100
-../dataset/benchmark/Manga109
+../dataset/benchmark/
 ```
 
 For example, the Set5 dataset should be placed as:
@@ -74,22 +65,6 @@ birdx2.png
 butterflyx2.png
 headx2.png
 womanx2.png
-```
-
-## Pre-trained Model
-
-Please place the pretrained model at:
-
-```bash
-../experiment/x2.pt
-```
-
-Or modify the `--pre_train` path in `demo.sh` according to your own model location.
-
-For example:
-
-```bash
---pre_train ../experiment/x2.pt
 ```
 
 ## Training
@@ -124,24 +99,23 @@ The trained model and logs will be saved under:
 ../experiment/BMFAN_x2_DIV2K_ep600_nf48
 ```
 
-## Testing
+## Pre-trained Model and Testing
 
-The testing command has been written in `demo.sh`.
+Please place the pretrained model at:
 
-Run the following command:
+```bash
+../experiment/x2.pt
+```
+
+Or modify the `--pre_train` path in `demo.sh` according to your own model location.
+
+The testing command has been written in `demo.sh`. To test BMFAN on Set5, Set14, B100, Urban100, and Manga109 for ×2 super-resolution, run:
 
 ```bash
 bash demo.sh
 ```
 
-If `demo.sh` does not have execution permission, you can also run:
-
-```bash
-chmod +x demo.sh
-./demo.sh
-```
-
-A typical `demo.sh` for ×2 testing is:
+A typical `demo.sh` is:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main.py \
