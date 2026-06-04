@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python main.py   --model BMFAN   --scale 2   --data_test Set5+Set14+B100+Urban100+Manga109   --n_feats 48   --rgb_range 1   --dir_data ../dataset   --pre_train ../experiment/x2.pt   --test_only
