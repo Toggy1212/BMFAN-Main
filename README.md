@@ -38,28 +38,40 @@ dataset/
 ├── DIV2K/
 │   ├── DIV2K_train_HR/
 │   └── DIV2K_train_LR_bicubic/
-│       └── X2/
+│       ├── X2/
+│       ├── X3/
+│       └── X4/
 └── benchmark/
     ├── Set5/
     │   ├── HR/
     │   └── LR_bicubic/
-    │       └── X2/
+    │       ├── X2/
+    │       ├── X3/
+    │       └── X4/
     ├── Set14/
     │   ├── HR/
     │   └── LR_bicubic/
-    │       └── X2/
+    │       ├── X2/
+    │       ├── X3/
+    │       └── X4/
     ├── B100/
     │   ├── HR/
     │   └── LR_bicubic/
-    │       └── X2/
+    │       ├── X2/
+    │       ├── X3/
+    │       └── X4/
     ├── Urban100/
     │   ├── HR/
     │   └── LR_bicubic/
-    │       └── X2/
+    │       ├── X2/
+    │       ├── X3/
+    │       └── X4/
     └── Manga109/
         ├── HR/
         └── LR_bicubic/
-            └── X2/
+            ├── X2/
+            ├── X3/
+            └── X4/
 ```
 
 For benchmark testing, the datasets should be placed under:
@@ -73,16 +85,28 @@ For example, the Set5 dataset should be placed as:
 ```bash
 ../dataset/benchmark/Set5/HR
 ../dataset/benchmark/Set5/LR_bicubic/X2
+../dataset/benchmark/Set5/LR_bicubic/X3
+../dataset/benchmark/Set5/LR_bicubic/X4
 ```
 
-The LR image names should follow the EDSR-style naming format:
+The LR image names should follow the EDSR-style naming format. For example, for Set5:
 
 ```bash
 babyx2.png
+babyx3.png
+babyx4.png
 birdx2.png
+birdx3.png
+birdx4.png
 butterflyx2.png
+butterflyx3.png
+butterflyx4.png
 headx2.png
+headx3.png
+headx4.png
 womanx2.png
+womanx3.png
+womanx4.png
 ```
 
 ## Training
