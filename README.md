@@ -2,6 +2,8 @@
 
 This repository provides the PyTorch implementation of **BMFAN** for lightweight single image super-resolution (SISR).
 
+The corresponding manuscript has been submitted to the journal **Multimedia Systems**.
+
 ## Environment
 
 This code is implemented based on the EDSR-PyTorch framework.  
@@ -12,6 +14,22 @@ https://github.com/sanghyun-son/EDSR-PyTorch
 ```
 
 ## Dataset Preparation
+
+We provide the **Set5** benchmark dataset in this repository for quick testing.  
+Other datasets, including **DIV2K**, **Set14**, **B100**, **Urban100**, and **Manga109**, should be downloaded by users.
+
+The dataset download links are listed below:
+
+```bash
+DIV2K:
+https://data.vision.ee.ethz.ch/cvl/DIV2K/
+
+Set14 / B100 / Urban100:
+https://cv.snu.ac.kr/research/EDSR/benchmark.tar
+
+Manga109:
+http://www.manga109.org/en/
+```
 
 Please organize the datasets as follows:
 
